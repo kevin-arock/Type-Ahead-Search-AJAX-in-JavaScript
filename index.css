@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.suggestions{
+    background-color: aquamarine;
+    display: inline-block;
+    list-style: none;
+    
+}
+
+.suggestions li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 50px;   
+}
+
