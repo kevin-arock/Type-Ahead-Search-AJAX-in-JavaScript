@@ -21,13 +21,14 @@ function display(){
     const mat = matchCity(this.value,cities);
     const html = mat.map((obj)=>{
         let reg = new RegExp(this.value,'gi');
-        const city = obj.city.replace(reg,`<span>${this.value}</span>`);
-        const state = obj.city.replace(reg,`<span>${this.value}</span>`);
+        const city = obj.city.replace(reg,`<span class="inner">${this.value}</span>`);
+        const state = obj.city.replace(reg,`<span class="inner">${this.value}</span>`);
         return `
         <li>
             <span class="name">${city}, ${state}</span>
             <span class="population">${obj.population}</span>
         </li>
+        <hr>
         `;
     }).join('');
     suggestions.innerHTML = html
