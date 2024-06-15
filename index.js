@@ -22,7 +22,7 @@ function display(){
     const html = mat.map((obj)=>{
         let reg = new RegExp(this.value,'gi');
         const city = obj.city.replace(reg,`<span class="inner">${this.value}</span>`);
-        const state = obj.city.replace(reg,`<span class="inner">${this.value}</span>`);
+        const state = obj.state.replace(reg,`<span class="inner">${this.value}</span>`);
         return `
         <li>
             <span class="name">${city}, ${state}</span>
